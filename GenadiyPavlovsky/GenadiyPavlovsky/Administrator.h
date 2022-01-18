@@ -3,6 +3,7 @@
 #include <vector>
 #include "Employee.h"
 #include <fstream>
+#include <algorithm>
 
 class Administrator :public Person
 {
@@ -31,6 +32,7 @@ public:
 	void DelEmployee(std::string fn);
 	void SearchEmployee(std::string fn);
 	void ChangeEmployee(std::string fn);
+	void SortEmployees();
 	void ClearEmployees();
 	void WritingFile();
 	void ReadFile();

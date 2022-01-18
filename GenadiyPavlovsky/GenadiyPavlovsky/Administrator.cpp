@@ -101,6 +101,21 @@ void Administrator::ClearEmployees()
 	vecEmployees.clear();
 }
 
+
+bool comparator(Employee & book1, Employee & book2)
+{
+	if (book1.getSalary() < book2.getSalary())
+	{
+			return book1.getSalary() < book2.getSalary();
+	}
+	else
+		return book2.getSalary() < book2.getSalary();
+}
+void Administrator::SortEmployees()
+{
+	std::sort(vecEmployees.begin(), vecEmployees.end(), comparator);
+}
+
 void Administrator::WritingFile()
 {
 	std::ofstream out("employees.txt");

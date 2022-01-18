@@ -13,7 +13,7 @@ int main()
 {
 	Administrator addmin("juliya", "nova");
 	addmin.ReadFile();
-	int choice = 0; //选择操作选项
+	int choice = 0; 
 	while (true)
 	{
 
@@ -27,9 +27,10 @@ int main()
 
 		cout << "                --------3.Find information.-----------" << endl;
 
-		cout << "                --------4.Delete Information.-----------" << endl;
+		cout << "                --------4.Delete employee.-----------" << endl;
 
-		cout << "                --------5.Change information.-----------" << endl;
+		cout << "                --------5.Change employee.-----------" << endl;
+		cout << "                --------6.Sort employees (by salary).-----------" << endl;
 
 		cout << "\n             Choice:";
 
@@ -40,7 +41,6 @@ int main()
 			addmin.Display();
 			addmin.WritingFile();
 			break;
-
 		case 2: 
 		{
 			Employee emp;
@@ -59,7 +59,7 @@ int main()
 		case 3:
 		{
 			string na;
-			cout << "Please enter the name of the employee you are looking for：";
+			cout << "Please enter the name of the employee you are looking for: ";
 			cin >> na;
 			addmin.SearchEmployee(na);
 		}
@@ -67,18 +67,21 @@ int main()
 		case 4:
 		{
 			string na;
-			cout << "Please enter the name of the employee you want to delete：";
+			cout << "Please enter the name of the employee you want to delete: ";
 			cin >> na;
 			addmin.DelEmployee(na);
 		}
 		case 5:
 		{
 			string na;
-			cout << "Please enter the name of the employee you want to change：";
+			cout << "Please enter the name of the employee you want to change:";
 			cin >> na;
 			addmin.ChangeEmployee(na);
 		}
-
+		case 6:
+		{
+			addmin.SortEmployees();
+		}
 
 		default:
 			break;
