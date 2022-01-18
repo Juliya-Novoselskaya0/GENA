@@ -71,6 +71,13 @@ int main()
 			cin >> na;
 			addmin.DelEmployee(na);
 		}
+		case 5:
+		{
+			string na;
+			cout << "Please enter the name of the employee you want to change：";
+			cin >> na;
+			addmin.ChangeEmployee(na);
+		}
 
 
 		default:

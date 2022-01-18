@@ -30,6 +30,7 @@ public:
 	void Display();
 	void DelEmployee(std::string fn);
 	void SearchEmployee(std::string fn);
+	void ChangeEmployee(std::string fn);
 	void ClearEmployees();
 	void WritingFile();
 	void ReadFile();
