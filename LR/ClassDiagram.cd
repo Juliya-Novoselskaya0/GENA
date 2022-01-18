@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Employee">
+    <Position X="8" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAABAEEAAhAAAAAKACACAgAACAAACBAAAAAAAA=</HashCode>
+      <FileName>Employee.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="User">
+    <Position X="6.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAgAAEAA=</HashCode>
+      <FileName>User.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Stack&lt;T&gt;">
+    <Position X="3.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAACAAAAAACACIAECIgggIAABAAAQCCIIAABAAA=</HashCode>
+      <FileName>Stack.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StackErr">
+    <Position X="1" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAABAAAAAAAACA=</HashCode>
+      <FileName>StackErr.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FileIO">
+    <Position X="0.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAgBAAAAAAAAAAAAAAAAAAgAACAAAAAYAAAA=</HashCode>
+      <FileName>FileIO.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
