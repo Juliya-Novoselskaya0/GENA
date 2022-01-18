@@ -1,9 +1,4 @@
 ﻿  Administrator.cpp
 F:\УНИВЕР\ООП\LABY FOR GENNADIY\GenadiyPavlovsky\GenadiyPavlovsky\Administrator.cpp(9,20): warning C4018: <: несоответствие типов со знаком и без знака
-  GenadiyPavlovsky.cpp
-F:\УНИВЕР\ООП\LABY FOR GENNADIY\GenadiyPavlovsky\GenadiyPavlovsky\GenadiyPavlovsky.cpp(34,11): warning C4566: символ, представленный универсальным именем символа "\u9009", невозможно представить в текущей кодовой странице (1251)
-F:\УНИВЕР\ООП\LABY FOR GENNADIY\GenadiyPavlovsky\GenadiyPavlovsky\GenadiyPavlovsky.cpp(34,11): warning C4566: символ, представленный универсальным именем символа "\u62E9", невозможно представить в текущей кодовой странице (1251)
-F:\УНИВЕР\ООП\LABY FOR GENNADIY\GenadiyPavlovsky\GenadiyPavlovsky\GenadiyPavlovsky.cpp(62,12): warning C4566: символ, представленный универсальным именем символа "\uFF1A", невозможно представить в текущей кодовой странице (1251)
-F:\УНИВЕР\ООП\LABY FOR GENNADIY\GenadiyPavlovsky\GenadiyPavlovsky\GenadiyPavlovsky.cpp(70,12): warning C4566: символ, представленный универсальным именем символа "\uFF1A", невозможно представить в текущей кодовой странице (1251)
-  Создание кода...
+F:\УНИВЕР\ООП\LABY FOR GENNADIY\GenadiyPavlovsky\GenadiyPavlovsky\Administrator.cpp(49,21): warning C4018: <: несоответствие типов со знаком и без знака
   GenadiyPavlovsky.vcxproj -> F:\УНИВЕР\ООП\LABY FOR GENNADIY\GenadiyPavlovsky\Debug\GenadiyPavlovsky.exe

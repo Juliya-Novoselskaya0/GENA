@@ -16,6 +16,11 @@ public:
 		departmentNumber = dn;
 		salary = sl;
 	}
+	Employee(std::string fn, std::string ps)
+	{
+		setFullname(fn);
+		setPassword(ps);
+	}
 	Employee(std::string fn, std::string ps, int dn, int sl)
 	{
 		setFullname(fn);

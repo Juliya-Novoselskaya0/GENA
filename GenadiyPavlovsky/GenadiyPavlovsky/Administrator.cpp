@@ -34,3 +34,40 @@ void Administrator::SearchEmployee(std::string fn)
 		}
 	}
 }
+
+void Administrator::ClearEmployees()
+{
+	vecEmployees.clear();
+}
+
+void Administrator::WritingFile()
+{
+	std::ofstream out("employees.txt");
+
+	if (out.is_open())
+	{
+		for (int i = 0; i < vecEmployees.size(); i++)
+		{
+			out << vecEmployees[i].getFullname() << " " << vecEmployees[i].getPassword() <<" "
+				<< vecEmployees[i].getDepartmentNumber()<<" "<<vecEmployees[i].getSalary() << std::endl;
+		}
+	}
+	out.close();
+}
+
+void Administrator::ReadFile()
+{
+	//std::vector<Employee> new_operations;
+	std::string fullN;
+	std::string pas;
+	int depNum, Sal;
+	std::ifstream in("employees.txt"); // окрываем файл для чтения
+	if (in.is_open())
+	{
+		while (in >> fullN >> pas >> depNum>>Sal)
+		{
+			vecEmployees.push_back(Employee(fullN,pas,depNum,Sal));
+		}
+	}
+	in.close();
+}

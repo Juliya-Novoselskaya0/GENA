@@ -12,14 +12,14 @@ using namespace std;
 int main()
 {
 	Administrator addmin("juliya", "nova");
-
+	addmin.ReadFile();
 	int choice = 0; //选择操作选项
 	while (true)
 	{
 
 		cout << "                ***********Personnel management system************\n" << endl;
 
-		cout << "                ------********************--------" << endl;
+		cout << "                ------------------------------------------" << endl;
 
 		cout << "                --------1.Displayed information.-----------" << endl;
 
@@ -38,6 +38,7 @@ int main()
 		{
 		case 1:
 			addmin.Display();
+			addmin.WritingFile();
 			break;
 
 		case 2: 
@@ -51,7 +52,6 @@ int main()
 			emp.setPassword(pass);
 			emp.setDepartmentNumber(dn);
 			emp.setSalary(sl);
-			//emp.setInfo();
 			addmin.AddEmployee(emp);
 			break;
 		}

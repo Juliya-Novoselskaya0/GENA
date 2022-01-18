@@ -2,6 +2,7 @@
 #include "Person.h"
 #include <vector>
 #include "Employee.h"
+#include <fstream>
 
 class Administrator :public Person
 {
@@ -29,5 +30,8 @@ public:
 	void Display();
 	void DelEmployee(std::string fn);
 	void SearchEmployee(std::string fn);
+	void ClearEmployees();
+	void WritingFile();
+	void ReadFile();
 };
 

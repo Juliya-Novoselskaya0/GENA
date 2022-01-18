@@ -22,6 +22,6 @@ int Employee::getSalary()
 
 void Employee::print()
 {
-	std::cout << "\n" << "full name: " << getFullname() << "password: " << getPassword() 
-		<< "department number: " << departmentNumber << "salary: " << salary << "\n";
+	std::cout << "\n" << "full name: " << getFullname() << " password: " << getPassword() 
+		<< " department number: " << departmentNumber << " salary: " << salary << "\n";
 }
