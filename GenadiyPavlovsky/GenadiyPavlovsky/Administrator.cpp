@@ -1,14 +1,12 @@
 ﻿#include "Administrator.h"
+
+
+
 void Administrator::AddEmployee(Employee emp)
 {
 	vecEmployees.push_back(emp);
 }
 
-void Administrator::Display()
-{
-	for (int i = 0; i < vecEmployees.size(); i++)
-		vecEmployees[i].print();
-}
 
 void Administrator::DelEmployee(std::string fn)
 {
@@ -23,20 +21,6 @@ void Administrator::DelEmployee(std::string fn)
 	}
 }
 
-Employee Administrator::SearchEmployee(std::string fn)
-{
-	std::vector<Employee>::iterator it;
-	for (it = vecEmployees.begin(); it != vecEmployees.end(); ++it)
-	{
-		if (it->getFullname() == fn)
-		{
-			//it->print();
-			return it->getEmployee();
-		}
-	}
-	Employee emp = Employee();
-	return emp;
-}
 
 void Administrator::ChangeEmployee(std::string fn)
 {
@@ -115,35 +99,4 @@ bool comparator(Employee & book1, Employee & book2)
 void Administrator::SortEmployees()
 {
 	std::sort(vecEmployees.begin(), vecEmployees.end(), comparator);
-}
-
-void Administrator::WritingFile()
-{
-	std::ofstream out("employees.txt", std::ios_base::trunc);
-	out.clear();
-	if (out.is_open())
-	{
-		for (int i = 0; i < vecEmployees.size(); i++)
-		{
-			out << vecEmployees[i].getFullname() << " " << vecEmployees[i].getPassword() <<" "
-				<< vecEmployees[i].getDepartmentNumber()<<" "<<vecEmployees[i].getSalary() << std::endl;
-		}
-	}
-	out.close();
-}
-
-void Administrator::ReadFile()
-{
-	std::string fullN;
-	std::string pas;
-	int depNum, Sal;
-	std::ifstream in("employees.txt"); 
-	if (in.is_open())
-	{
-		while (in >> fullN >> pas >> depNum>>Sal)
-		{
-			vecEmployees.push_back(Employee(fullN,pas,depNum,Sal));
-		}
-	}
-	in.close();
 }

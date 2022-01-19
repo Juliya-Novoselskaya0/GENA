@@ -17,7 +17,8 @@ Employee Accountant::SearchEmployee(std::string fn)
 			return it->getEmployee();
 		}
 	}
-	return it->getEmployee();
+	Employee emp = Employee();
+	return emp;
 }
 
 void Accountant::ChangeEmployee_Salary(std::string fn)

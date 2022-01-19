@@ -2,12 +2,13 @@
 #include "Person.h"
 #include <vector>
 #include "Employee.h"
+#include "Accountant.h"
 #include <fstream>
 #include <algorithm>
 
-class Administrator :public Person
+class Administrator :public Accountant
 {
-	std::vector<Employee> vecEmployees;
+	//std::vector<Employee> vecEmployees;
 	//shared_ptr<vector<Employee>> employee;
 
 public:
@@ -28,13 +29,13 @@ public:
 	}
 
 	void AddEmployee(Employee emp);
-	void Display();
+	//void Display();
 	void DelEmployee(std::string fn);
-	Employee SearchEmployee(std::string fn);
+	//Employee SearchEmployee(std::string fn);
 	void ChangeEmployee(std::string fn);
 	void SortEmployees();
 	void ClearEmployees();
-	void WritingFile();
-	void ReadFile();
+	//void WritingFile();
+	//void ReadFile();
 };
 

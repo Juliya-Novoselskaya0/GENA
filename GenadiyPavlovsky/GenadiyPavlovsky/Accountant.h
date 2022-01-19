@@ -7,6 +7,7 @@
 
 class Accountant : public Person
 {
+protected:
 	std::vector<Employee> vecEmployees;
 public:
 	Accountant()
@@ -25,13 +26,10 @@ public:
 		vecEmployees = vEm;
 	}
 
-	//void AddEmployee(Employee emp);
 	void Display();
-	//void DelEmployee(std::string fn);
 	Employee SearchEmployee(std::string fn);
 	void ChangeEmployee_Salary(std::string fn);
 	void SortEmployees();
-	//void ClearEmployees();
 	void WritingFile();
 	void ReadFile();
 };

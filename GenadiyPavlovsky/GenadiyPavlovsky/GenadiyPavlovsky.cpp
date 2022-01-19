@@ -18,6 +18,38 @@ const std::string accPAS = "accountant";
 const std::string accNAME = "accountant";
 extern int i = 0;
 
+//function for checking the correctness of the entered integer values
+int enter_int(std::istream& in, double min, double max) {
+	double i;
+	int flags;
+	do {
+		try {
+			flags = 0;
+			std::cout << "Enter the number... ";
+			in >> i;
+			if (!std::cin || std::cin.peek() != '\n') {
+				throw 1;
+			}
+			if (i < min || i > max) {
+				throw 'a';
+			}
+		}
+		catch (int) {
+			flags = 1;
+			std::cout << "It's not a (type) number!!!\n\n";
+			std::cin.clear(0);
+			rewind(stdin);
+		}
+		catch (char) {
+			flags = 1;
+			std::cout << "Out of range.\n\n";
+			std::cin.clear(0);
+			rewind(stdin);
+		}
+	} while (flags);
+	return i;
+}
+
 void menuAdmin(Administrator add)
 {
 	int choice = 0;
@@ -47,7 +79,15 @@ void menuAdmin(Administrator add)
 			cout << "Enter info \n";
 			std::string fullN, pass;
 			int sl, dn;
-			cin >> fullN >> pass >> dn >> sl;
+			cout << "Enter full name: ";
+			cin >> fullN;
+			cout << "Enter password: ";
+			cin >> pass;
+			cout << "Enter department number: ";
+			dn = enter_int(std::cin, 1, 100);
+			cout << "Enter salary: ";
+			sl= enter_int(std::cin, 200, 3000);
+
 			emp.setFullname(fullN);
 			emp.setPassword(pass);
 			emp.setDepartmentNumber(dn);
@@ -165,11 +205,12 @@ int main()
 {
 	Administrator addmin("gena", "gena");
 	Accountant acc("accountant", "accountant");
-	addmin.ReadFile();
+	
 
 	std::string name, pas;
 	
 	do {
+		addmin.ReadFile();
 		cout << "\n--------------------SIGN IN------------------\n";
 		cout << "Enter name: \n";
 		cin >> name;
@@ -197,6 +238,7 @@ int main()
 	} while (i != 1);
 	system("pause");
 }
+
 
  //Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
  //Отладка программы: F5 или меню "Отладка" > "Запустить отладку"

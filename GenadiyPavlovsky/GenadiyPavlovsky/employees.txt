@@ -2,3 +2,5 @@ Petia klass 12 1100
 Juliya 222 32 1200
 Vlad 0808 7 2005
 Vasia novo 30 2150
+Vikulik 1111 7 1500
+Igor 232 45 574
