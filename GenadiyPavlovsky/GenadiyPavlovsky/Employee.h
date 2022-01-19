@@ -32,7 +32,7 @@ public:
 	void setSalary(int sl);
 	int getDepartmentNumber();
 	int getSalary();
-
+	Employee getEmployee();
 	void print();
 };
 

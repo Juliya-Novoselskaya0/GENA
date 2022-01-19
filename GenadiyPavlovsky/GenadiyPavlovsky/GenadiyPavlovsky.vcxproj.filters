@@ -27,6 +27,9 @@
     <ClCompile Include="Administrator.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="Accountant.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Person.h">
@@ -36,6 +39,9 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="Administrator.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Accountant.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

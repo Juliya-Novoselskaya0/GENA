@@ -23,16 +23,19 @@ void Administrator::DelEmployee(std::string fn)
 	}
 }
 
-void Administrator::SearchEmployee(std::string fn)
+Employee Administrator::SearchEmployee(std::string fn)
 {
 	std::vector<Employee>::iterator it;
 	for (it = vecEmployees.begin(); it != vecEmployees.end(); ++it)
 	{
 		if (it->getFullname() == fn)
 		{
-			it->print();
+			//it->print();
+			return it->getEmployee();
 		}
 	}
+	Employee emp = Employee();
+	return emp;
 }
 
 void Administrator::ChangeEmployee(std::string fn)
@@ -87,8 +90,6 @@ void Administrator::ChangeEmployee(std::string fn)
 					it->setSalary(Sal);
 				}
 				break;
-				case 5:
-					break;
 				}
 			} 			
 			while (choice != 5);
@@ -118,8 +119,8 @@ void Administrator::SortEmployees()
 
 void Administrator::WritingFile()
 {
-	std::ofstream out("employees.txt");
-
+	std::ofstream out("employees.txt", std::ios_base::trunc);
+	out.clear();
 	if (out.is_open())
 	{
 		for (int i = 0; i < vecEmployees.size(); i++)
@@ -133,11 +134,10 @@ void Administrator::WritingFile()
 
 void Administrator::ReadFile()
 {
-	//std::vector<Employee> new_operations;
 	std::string fullN;
 	std::string pas;
 	int depNum, Sal;
-	std::ifstream in("employees.txt"); // окрываем файл для чтения
+	std::ifstream in("employees.txt"); 
 	if (in.is_open())
 	{
 		while (in >> fullN >> pas >> depNum>>Sal)

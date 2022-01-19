@@ -20,6 +20,11 @@ int Employee::getSalary()
 	return salary;
 }
 
+Employee Employee::getEmployee()
+{
+	return *this;
+}
+
 void Employee::print()
 {
 	std::cout << "\n" << "full name: " << getFullname() << " password: " << getPassword() 
